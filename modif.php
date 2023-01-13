@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <div class="header">
+        <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -21,7 +21,7 @@
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
                 </ul>
             </div>
-        </div><br><br>
+        </nav><br><br>
 
         <center>
             <?php
@@ -33,6 +33,7 @@
             }
             
             $sql = "SELECT * FROM machine WHERE id_machine IN (SELECT MAX(id_machine)FROM machine)ORDER BY id_machine ASC";
+            /* $sql = "SELECT FROM machine WHERE id_machine = '".$id_machine."'"; */
             $result = $conn-> query($sql);
 
             if ($result -> num_rows > 0) {
@@ -55,7 +56,7 @@
             ?>
 
         </center><br><br>
-        
+        <!--Modifier le formulaire de modification-->
         <form action="update.php?ID=<?php echo $id_machine ?>" method="POST">
             <label form="nom">Date : </label>
             <input type="text" class="from-control mb-2" placeholder="date" name="date" value="<?php echo $date ?>"/>
@@ -82,6 +83,8 @@
             <input type="text" class="from-control mb-2" placeholder="couleur_GF" name="couleur_GF" value="<?php echo $couleur_GF ?>"/>
             
             <button class="btn btn-primary" name="update">Mise à jour</button>
+
+            <!--Ne modifie que la derniere enregistre-->
         </form>
         </table>
     </body>

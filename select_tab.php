@@ -9,7 +9,7 @@
     </head>
     <body>
 
-    <div class="header">
+    <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -17,23 +17,23 @@
 
                 <ul class="navigation">
                     <a href="aide.php"><li>Aide</li></a>
-                    <a href="logout.php"><li>Logout</li></a>
                     <a href="app.php"><li>Menu</li></a>
+                    <a href="select_tab.php"><li>Les Taux-taux</li></a>
+                    <a href="logout.php"><li>Déconnexion</li></a>
                 </ul>
             </div>
-    </div><br><br>   
+    </nav><br><br>   
 
     <div style="text-align: right;">
         <form action="" method="POST">
             <label for="month">Date : 
             <input type="month" name="date"/>
             <label for="ident">Identifiant : 
-            <input type="texts" name="identifiant"/>
+            <input type="texts" name="identifiant"/> 
             <input type="submit" name="datetime" value="Selectionner"></label>
         </form>
     </div>   
-
-    <br><br>
+    <br><br> 
 
     <section class="section">
         <div class="container">
@@ -82,10 +82,10 @@
                     ?>
 
                     </table><br><br>
-                    
+                    <hr>
                     <center><h3>Relever Compteur Total</h3></center>
-                    <br><br>
-        
+                    <br>
+
                     <table>
                     <tr>
                         <th>Date</th>

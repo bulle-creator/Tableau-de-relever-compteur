@@ -9,7 +9,7 @@
     </head>
     <body>
 
-    <div class="header">
+    <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -17,16 +17,15 @@
 
                 <ul class="navigation">
                     <a href="aide.php"><li>Aide</li></a>
-                    <a href="logout.php"><li>Logout</li></a>
                     <a href="app.php"><li>Menu</li></a>
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
+                    <a href="logout.php"><li>Déconnexion</li></a>
                 </ul>
             </div>
-        </div><br><br>
+        </nav><br><br>
 
         <center><table>
             <tr>
-                <th>Id</th>
                 <th>Date</th>
                 <th>Constructeur</th>
                 <th>Type</th>
@@ -46,13 +45,13 @@
         die("Connection raté :". $conn-> connect_error);
     }
 
-    $sql = "SELECT * FROM machine/*WHERE id_machine IN (SELECT MAX(id_machine)FROM machine)ORDER BY id_machine ASC*/";
+    $sql = "SELECT * FROM machine WHERE id_machine IN (SELECT MAX(id_machine)FROM machine)ORDER BY id_machine ASC";
     $result = $conn-> query($sql);
 
     if ($result -> num_rows > 0) {
         while ($row = $result -> fetch_assoc()) {
             echo "<tr>
-                    <td>" .$row ["id_machine"] ."</td>
+                    
                     <td>" .$row ["date"] ."</td>
                     <td>" .$row ["constructeur"] ."</td>
                     <td>" .$row ["type"] ."</td>

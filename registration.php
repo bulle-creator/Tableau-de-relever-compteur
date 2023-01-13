@@ -53,7 +53,7 @@ if(isset($_POST["submit"])){
     </head>
     <body>
 
-    <div class="header">
+    <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -63,10 +63,10 @@ if(isset($_POST["submit"])){
                     <a href="logout.php"><li>Login</li></a>
                 </ul>
             </div>
-        </div><br><br>
+    </nav><br><br>
     
         <form class="" action="" method="POST" autocomplete="off">
-                <label form="nom">Nom : </label>
+                
                 <input type="text" name="nom" id="nom" require value=""><br>
 
                 <label form="prenom">Prénom : </label>

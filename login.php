@@ -39,17 +39,13 @@ if(isset($_POST["submit"])){
         <title>Login</title>
     </head>
     <body>
-    <div class="header">
+    <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
                 </div>
-
-                <ul class="navigation">
-                    <a href="logout.php"><li>Logout</li></a>
-                </ul>
             </div>
-        </div><br><br>
+        </nav> <br><br><br><br>
         
         <form class="" action="" method="POST" autocomplete="off">
             <div>

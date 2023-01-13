@@ -8,7 +8,7 @@
     </head>
     <body>
         
-        <div class="header">
+        <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -18,7 +18,7 @@
                     <a href="logout.php"><li>Login</li></a>
                 </ul>
             </div>
-        </div><br><br><br><br>
+        </nav><br><br><br><br>
 
         <center>
             <div>

@@ -32,7 +32,7 @@
     </head>
     <body>
 
-    <div class="header">
+    <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -40,12 +40,12 @@
 
                 <ul class="navigation">
                     <a href="aide.php"><li>Aide</li></a>
-                    <a href="logout.php"><li>Logout</li></a>
                     <a href="app.php"><li>Menu</li></a>
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
+                    <a href="logout.php"><li>Déconnexion</li></a>
                 </ul>
             </div>
-        </div><br><br>
+        </nav><br><br>
 
         <form class="" action="" method="POST" autocomplete="off">
 
@@ -98,7 +98,6 @@
                         <option value="3776711208">3776711208</option>
                         <option value="377671132">377671132</option>
                         <option value="3146364992">3146364992</option>
-                        <option value="nref"></option>
                     </select>
                     </div>
                 </div>

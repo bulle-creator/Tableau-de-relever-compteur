@@ -9,7 +9,7 @@
     </head>
     <body>
 
-    <div class="header">
+    <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
                     <h1><span>Tableau de relever compteur</span></h1>
@@ -17,13 +17,12 @@
 
                 <ul class="navigation">
                     <a href="aide.php"><li>Aide</li></a>
-                    <a href="logout.php"><li>Logout</li></a>
                     <a href="app.php"><li>Menu</li></a>
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
+                    <a href="logout.php"><li>Déconnexion</li></a>
                 </ul>
             </div>
-    </div>
-    <br><br>
+    </nav><br><br>
 
     <div style="text-align: left;">
     </div><br><br>
