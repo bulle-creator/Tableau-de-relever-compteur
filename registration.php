@@ -32,15 +32,15 @@ if(isset($_POST["submit"])){
             } 
             
         else{
-            $query = "INSERT INTO utilisateur VALUES('','$nom','$prenom','$login','$mot_de_passe','$role')";
+            $query = "INSERT INTO utilisateur VALUES('','$nom','$prenom','$login',PASSWORD('$mot_de_passe'),'$role')";
             mysqli_query($conn,$query);
+            $query_2 = "ALTER TABLE utilisateur MODIFY `mot_de_passe` VARCHAR(42); UPDATE mot_de_passe SET `mot_de_passe` = PASSWORD(`mot_de_passe`);";
+            mysqli_query($conn,$query_2);
             echo
                 "<script>alert('Création d'un nouvelle utilisateur réussi');</script>";
             }
-        }
-    
+    } 
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +67,7 @@ if(isset($_POST["submit"])){
     
         <form class="" action="" method="POST" autocomplete="off">
                 
+                <label form="nom">Nom : </label>
                 <input type="text" name="nom" id="nom" require value=""><br>
 
                 <label form="prenom">Prénom : </label>
