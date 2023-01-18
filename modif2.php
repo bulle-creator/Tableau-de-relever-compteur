@@ -32,8 +32,8 @@
                 die("Connection raté :". $conn-> connect_error);
             }
             
-            $sql = "SELECT * FROM machine WHERE id_machine IN (SELECT MAX(id_machine)FROM machine)ORDER BY id_machine ASC";
-            /* $sql = "SELECT FROM machine WHERE id_machine = '".$id_machine."'"; */
+            /* $sql = "SELECT * FROM machine WHERE id_machine IN (SELECT MAX(id_machine)FROM machine)ORDER BY id_machine ASC";*/
+            $sql = "SELECT * FROM machine WHERE id_machine = '".$id_machine."'"; 
             $result = $conn-> query($sql);
 
             if ($result -> num_rows > 0) {

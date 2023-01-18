@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style/index.css">
-        <title>Nouveau relever de compte</title>
+        
+        <title>Relever de compte</title>
     </head>
     <body>
 
@@ -16,15 +17,16 @@
                 </div>
 
                 <ul class="navigation">
+                    
                     <a href="app.php"><li>Menu</li></a>
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
                     <a href="aide.php"><li>Aide</li></a>
-                    <a href="logout.php"><li>Déconnexion</li></a
+                    <a href="logout.php"><li>Déconnexion</li></a>
                 </ul>
             </div>
-        </nav><br><br>
+    </nav><br><br>
 
-        <center><table>
+    <center><table>
             <tr>
                 <th>Date</th>
                 <th>Constructeur</th>
@@ -45,7 +47,7 @@
         die("Connection raté :". $conn-> connect_error);
     }
 
-    $sql = "SELECT * FROM machine  WHERE id_machine IN (SELECT MAX(id_machine)FROM machine)ORDER BY id_machine ASC";
+    $sql = "SELECT * FROM machine ";
     $result = $conn-> query($sql);
 
     if ($result -> num_rows > 0) {
@@ -62,8 +64,8 @@
                     <td>" .$row ["couleur_GF"]."</td>";
 
                     ?>
-                    <td><a href="modif.php?GetId=<?php echo $row['id_machine'] ?>">Modifier</a></td>
-                    <td><a href="supprimer.php?Del=<?php echo $row['id_machine'] ?>">Supprimer</a></td>
+                    <td><a href="modif2.php?GetId=<?php echo $row['id_machine'] ?>">Modifier</a></td>
+                    <td><a href="supprimer2.php?Del=<?php echo $row['id_machine'] ?>">Supprimer</a></td>
 
                 <?php
                 "</tr> \n";  

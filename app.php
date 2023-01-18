@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style/app.css">
+        <link rel="stylesheet" href="style/index.css">
         <title>Relever de compte</title>
     </head>
     <body>
@@ -12,20 +12,21 @@
     <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
-                    <h1><span>Tableau de relever compteur</span></h1>
+                    <h1>Tableau de relever compteur</h1>
                 </div>
 
                 <ul class="navigation">
-                    <a href="aide.php"><li>Aide</li></a>
                     <a href="app.php"><li>Menu</li></a>
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
+                    <a href="aide.php"><li>Aide</li></a>
                     <a href="logout.php"><li>Déconnexion</li></a>
+                    <i class="fi fi-br-sign-out-alt"></i>
                 </ul>
             </div>
-    </nav><br><br>
+    </nav><br>
 
-    <div style="text-align: left;">
-    </div><br><br>
+    <div style="text-align: left;"> 
+    </div> <br>
 
     <section class="section">
         <div class="container">
@@ -92,7 +93,25 @@
                 <button type="submit" class="btn-space" name="submit">Telecharger</button>
             </div>
         </a>
-        
+
+        <?php
+      /*
+        require 'config.php';
+
+            $role = $_GET["role"];
+
+            $admin = mysqli_query($conn, "SELECT role FROM utilisateur WHERE role ='Administrateur' ");
+            if($admin) {
+                echo
+                "<script> alert ('Vous n êtes pas administrateur vous ne pouvez pas avoir accés.'); </script>";
+            }
+            else{} */ 
+        ?>
+        <a href="edit.php">
+            <div style="text-align: right;">
+                <button type="submit" class="btn-space" name="submit">Modifier</button>
+            </div>
+        </a>
 
     </section> 
 

@@ -35,7 +35,7 @@
     <nav class="header">
             <div class="inner_header">
                 <div class="logo_container">
-                    <h1><span>Tableau de relever compteur</span></h1>
+                    <h1 href="app.php" >Tableau de relever compteur</h1>
                 </div>
 
                 <ul class="navigation">

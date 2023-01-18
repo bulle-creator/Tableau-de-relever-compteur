@@ -17,30 +17,28 @@ if(isset($_POST["submit"])){
     $duplicate = mysqli_query($conn, "SELECT * FROM utilisateur WHERE login ='$login'");
     if (mysqli_num_rows($duplicate) > 0){
         echo
-            "<script>alert('Ce login est déjà pris');</script>";
+            "<script> alert ('Ce login est déjà pris'); </script>";
+        }
+
+    elseif ($mot_de_passe != $confpass  ){
+        echo
+            "<script> alert ('Vos mot de pase ne sont pas identique'); </script>";
+        }
+    elseif ($code != $true_code ){
+        echo
+            "<script> alert ('Vous n est pas l administrateur'); </script>";
         }
 
     else{
-        if ($mot_de_passe != $confpass ){
-            echo
-                "<script>alert('Vos mot de pase ne sont pas identique ou vous n'est pas l'administrateur');</script>";
-            }
+        $query = "INSERT INTO utilisateur VALUES('','$nom','$prenom','$login',PASSWORD('$mot_de_passe'),'$role')";
+        mysqli_query($conn,$query);
+        $query_2 = "ALTER TABLE utilisateur MODIFY `mot_de_passe` VARCHAR(42); UPDATE mot_de_passe SET `mot_de_passe` = PASSWORD(`mot_de_passe`);";
+        mysqli_query($conn,$query_2);
+        echo
+            "<script> alert ('Création d un nouvelle utilisateur réussi');</script>";
+        }
+    }
 
-        elseif($code != $true_code){
-            echo
-                "<script>alert('Vos mot de pase ne sont pas identique ou vous n'est pas l'administrateur');</script>";
-            } 
-            
-        else{
-            $query = "INSERT INTO utilisateur VALUES('','$nom','$prenom','$login',PASSWORD('$mot_de_passe'),'$role')";
-            mysqli_query($conn,$query);
-            $query_2 = "ALTER TABLE utilisateur MODIFY `mot_de_passe` VARCHAR(42); UPDATE mot_de_passe SET `mot_de_passe` = PASSWORD(`mot_de_passe`);";
-            mysqli_query($conn,$query_2);
-            echo
-                "<script>alert('Création d'un nouvelle utilisateur réussi');</script>";
-            }
-    } 
-}
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +58,7 @@ if(isset($_POST["submit"])){
                 </div>
 
                 <ul class="navigation">
-                    <a href="logout.php"><li>Login</li></a>
+                    <a href="logout.php"><li>Déconnexion</li></a>
                 </ul>
             </div>
     </nav><br><br>

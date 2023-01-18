@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style/select_tab.css">
+        <link rel="stylesheet" href="style/index.css">
         <title>Relever de compte</title>
     </head>
     <body>
@@ -16,13 +16,13 @@
                 </div>
 
                 <ul class="navigation">
-                    <a href="aide.php"><li>Aide</li></a>
-                    <a href="app.php"><li>Menu</li></a>
+                <a href="app.php"><li>Menu</li></a>
                     <a href="select_tab.php"><li>Les Taux-taux</li></a>
-                    <a href="logout.php"><li>Déconnexion</li></a>
+                    <a href="aide.php"><li>Aide</li></a>
+                    <a href="logout.php"><li>Déconnexion</li></a
                 </ul>
             </div>
-    </nav><br><br>   
+    </nav><br>   
 
     <div style="text-align: right;">
         <form action="" method="POST">
@@ -33,7 +33,10 @@
             <input type="submit" name="datetime" value="Selectionner"></label>
         </form>
     </div>   
-    <br><br> 
+    <br> 
+
+    <center><h3>Relever Compteur d'un mois</h3></center>
+                    <br>
 
     <section class="section">
         <div class="container">
@@ -81,9 +84,9 @@
                         $conn->close();
                     ?>
 
-                    </table><br><br>
-                    <hr>
-                    <center><h3>Relever Compteur Total</h3></center>
+                    </table><br>
+                    <hr><br>
+                    <center><h3>Relever Compteur Total d'un mois</h3></center>
                     <br>
 
                     <table>

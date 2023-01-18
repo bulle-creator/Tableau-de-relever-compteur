@@ -15,14 +15,14 @@
                 </div>
 
                 <ul class="navigation">
-                    <a href="logout.php"><li>Login</li></a>
+                    <a href="logout.php"><li>Connexion</li></a>
                 </ul>
             </div>
         </nav><br><br><br><br>
 
         <center>
-            <div>
-                <img src="images/reprographie.jpg" >
+            <div >
+                <img class="image" src="images/reprographie.jpg" >
             </div>
         </center>
     </body>
