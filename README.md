@@ -69,15 +69,17 @@ Voici un exemple du tableau de relevés :
 | 2025-06-01 | Ricot       | n&b     |
 | 2025-06-01 | Canon       | couleur |
 
+# 📂 Structure du Projet
 
-
-
-
-
-
-
-
-
-
-
-
+````
+releve-compteur/
+├── public/           # Fichiers publics (PHP, images)
+├── src/              # Code source
+│   ├── components/   # Composants React
+│   ├── pages/        # Pages de l'application
+│   ├── utils/        # Utilitaires (formatage, API)
+│   └── styles/       # Fichiers CSS/SCSS
+├── .gitignore        # Fichiers ignorés par Git
+├── package.json      # Dépendances et scripts
+└── README.md         # Documentation du projet
+````
