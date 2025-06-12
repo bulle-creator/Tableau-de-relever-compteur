@@ -2,25 +2,22 @@ Pour ce projet je vais crée un tableau de relever pour une reprographie.
 
 Pour commencer installer php
 
-1. Windows
-Télécharger PHP :
+# 1. Windows
 
-Accédez au site officiel de PHP : php.net/downloads
+## Télécharger PHP :
+- Accédez au site officiel de PHP : *[php.net/downloads](https://www.php.net/downloads)*
+- Téléchargez la version de PHP correspondant à votre version de Windows (Thread Safe pour un serveur web).
 
-Téléchargez la version de PHP correspondant à votre version de Windows (Thread Safe pour un serveur web).
+## 2. Installer PHP :
 
-Installer PHP :
+- Extrayez l'archive téléchargée dans un dossier, par exemple *C:\php.*
+- Ajoutez le chemin du dossier PHP *(C:\php)* à la variable d'environnement *PATH*.
 
-Extrayez l'archive téléchargée dans un dossier, par exemple C:\php.
+## 3.Configurer PHP :
 
-Ajoutez le chemin du dossier PHP (C:\php) à la variable d'environnement PATH.
+- Renommez le fichier php.ini-development en php.ini.
+- Ouvrez ce fichier avec un éditeur de texte et configurez les extensions et les paramètres si nécessaire.
 
-Configurer PHP :
+## 4.Tester l'installation :
 
-Renommez le fichier php.ini-development en php.ini.
-
-Ouvrez ce fichier avec un éditeur de texte et configurez les extensions et les paramètres si nécessaire.
-
-Tester l'installation :
-
-Ouvrez le terminal, tapez php -v pour vérifier que PHP est installé.
+- Ouvrez le terminal, tapez *php -v* pour vérifier que PHP est installé.
