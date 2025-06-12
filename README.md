@@ -35,6 +35,52 @@ Ce projet est une application web simple permettant de suivre et gérer les rele
 
 - Ouvrez le terminal, tapez *php -v* pour vérifier que PHP est installé.
 
+##  Télécharger XAMPP
+
+- Rendez-vous sur le site officiel de [XAMPP.](https://www.apachefriends.org)
+- Choisissez la version adaptée à votre système d'exploitation (Windows, macOS ou Linux).
+- Téléchargez le fichier d'installation.
+
+ ### Installer XAMPP
+ 
+ #### Sur Windows :
+- Exécutez le fichier d'installation téléchargé.
+- Si une fenêtre de contrôle de compte utilisateur (UAC) s'ouvre, cliquez sur Oui pour autoriser l'installation.
+
+#### Suivez l'assistant d'installation :
+
+- Sélectionnez les composants à installer (les paramètres par défaut conviennent généralement).
+- Choisissez un dossier d'installation (par défaut, *C:\xampp*).
+- Terminez le processus d'installation.
+
+
+### Démarrer XAMPP
+
+#### Lancez le panneau de contrôle de XAMPP :
+
+- Sur Windows : Exécutez *xampp-control.exe* depuis le dossier d'installation.
+- Démarrez les services nécessaires (Apache, MySQL, etc.) en cliquant sur le bouton Start à côté de chaque service.
+
+### Vérifier l'installation
+
+- Ouvrez un navigateur web et saisissez *http://localhost* dans la barre d'adresse.
+- Si XAMPP est correctement installé, le tableau de bord XAMPP s'affichera.
+
+### Tester PHP (Optionnel)
+
+#### Créez un fichier PHP de test :
+
+- Allez dans le dossier *htdocs* du répertoire d'installation de XAMPP.
+- Créez un fichier nommé *test.php* avec le contenu suivant :
+
+```
+<?php
+phpinfo();
+?>
+```
+
+#### Ouvrez un navigateur et visitez *http://localhost/test.php*. Vous devriez voir une page contenant les informations sur PHP.
+
 ## Accéder au projet :  
 
 - Cloner ce dépot:
